@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0c10" />
+
+  <title>Tournoi E‑Sport  — Préinscription gratuite</title>
+  <meta name="description" content="Préinscris-toi au Tournoi E‑Sport d’Aubervilliers (EA FC 26, Tekken, Mario Kart). Gratuit, ouvert à tous. Places limitées." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tournoi E‑Sport — Aubervilliers" />
+  <meta property="og:description" content="Préinscription gratuite • EA FC 26 • Tekken • Mario Kart • Ouvert à tous" />
+  <meta property="og:image" content="./assets/logo-placeholder.png" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tournoi E‑Sport — Aubervilliers" />
+  <meta name="twitter:description" content="Préinscription gratuite • Places limitées" />
+  <meta name="twitter:image" content="./assets/logo-placeholder.png" />
+
+  <!-- Perf: preconnect Google Fonts (optionnel) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Optionnel: décommente pour charger Poppins (sinon police système) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"> -->
+
+  <!-- Fix: s'assurer que l'attribut HTML `hidden` masque toujours l'élément,
+       même si le CSS de classe (.overlay { display: grid; }) l'écrase. -->
+  <style>
+    [hidden] { display: none !important; }
+  </style>
+
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand" aria-label="Tournoi E‑Sport Aubervilliers">
+        <!-- Logo en inline (placeholder). Remplace aussi /assets/logo-placeholder.png si besoin. -->
+        <div class="logo" aria-hidden="true">
+          <span class="logo-mark">A</span>
+        </div>
+        <div class="brand-text">
+          <p class="brand-title"> E‑Sport</p>
+          <p class="brand-subtitle">Préinscription</p>
+        </div>
+      </div>
+
+      <nav class="top-nav" aria-label="Navigation">
+        <a href="#jeux">Jeux</a>
+        <a href="#comment">Format</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-small" href="#preinscription">Je me préinscris</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Places limitées • Gratuit</p>
+          <h1 id="hero-title">TOURNOI E‑SPORT –</h1>
+          <p class="tagline">EA FC 26 • TEKKEN • MARIO KART — Gratuit · Ouvert à tous · Ramène ton squad</p>
+
+          <dl class="event-meta" aria-label="Informations événement">
+            <div class="meta-item">
+              <dt>Date</dt>
+              <dd><strong>la date</strong></dd>
+            </div>
+            <div class="meta-item">
+              <dt>Lieu</dt>
+              <dd><strong>[LIEU—EX: Gymnase / Salle]</strong></dd>
+            </div>
+          </dl>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#preinscription" id="ctaPreinscrire">
+              Je me préinscris
+              <span class="btn-note">Gratuit – Place limitée</span>
+            </a>
+            <a class="btn btn-ghost" href="#qr">Partager (QR)</a>
+          </div>
+
+          <p class="hero-microcopy">Ici, on joue. On respecte. On kiffe.</p>
+        </div>
+
+        <aside class="hero-card" aria-label="Aperçu rapide">
+          <h2 class="card-title">Au programme</h2>
+
+          <ul class="pill-list" id="jeux" aria-label="Jeux disponibles">
+            <li class="pill" aria-label="Jeu: EA FC 26">
+              <span class="pill-icon" aria-hidden="true">⚽</span>
+              <span class="pill-text">EA FC 26</span>
+            </li>
+            <li class="pill" aria-label="Jeu: Tekken">
+              <span class="pill-icon" aria-hidden="true">🥊</span>
+              <span class="pill-text">Tekken</span>
+            </li>
+            <li class="pill" aria-label="Jeu: Mario Kart">
+              <span class="pill-icon" aria-hidden="true">🏁</span>
+              <span class="pill-text">Mario Kart</span>
+            </li>
+          </ul>
+
+          <div class="card-divider" role="presentation"></div>
+
+          <h3 class="card-subtitle" id="comment">Comment ça marche</h3>
+          <ol class="steps">
+            <li><strong>Qualifications</strong> : matchs courts ~5 min</li>
+            <li><strong>Top 16</strong> : matchs ~10 min</li>
+            <li><strong>Finales</strong> : BO selon le jeu (annonce sur place)</li>
+          </ol>
+
+          <p class="card-footnote">Format indicatif — ajusté selon le nombre d’inscrits.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="preinscription-title" id="preinscription">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="preinscription-title">Préinscription</h2>
+          <p class="section-subtitle">Remplis en 30 secondes. On te recontacte avec les infos pratiques.</p>
+        </div>
+
+        <div class="form-grid">
+          <form
+            id="signupForm"
+            class="form"
+            method="POST"
+            action="https://formspree.io/f/TON_ENDPOINT"
+            aria-describedby="form-help form-status"
+          >
+            <!-- IMPORTANT : remplace TON_ENDPOINT par ton endpoint Formspree (voir README). -->
+
+            <!-- Honeypot anti-spam: doit rester vide -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Ne pas remplir</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="prenom">Prénom <span aria-hidden="true">*</span></label>
+                <input id="prenom" name="prenom" type="text" autocomplete="given-name" required />
+              </div>
+
+              <div class="field">
+                <label for="nom">Nom</label>
+                <input id="nom" name="nom" type="text" autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="age">Âge <span aria-hidden="true">*</span></label>
+                <input id="age" name="age" type="number" min="6" max="99" inputmode="numeric" required />
+              </div>
+
+              <div class="field">
+                <label for="contact">Email ou téléphone <span aria-hidden="true">*</span></label>
+                <input
+                  id="contact"
+                  name="contact"
+                  type="text"
+                  autocomplete="email"
+                  inputmode="email"
+                  placeholder="ex: prenom@mail.com ou 06 12 34 56 78"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="jeu">Jeu choisi</label>
+                <select id="jeu" name="jeu">
+                  <option value="EA FC 26">EA FC 26</option>
+                  <option value="Tekken">Tekken</option>
+                  <option value="Mario Kart">Mario Kart</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="pseudo">Pseudo</label>
+                <input id="pseudo" name="pseudo" type="text" autocomplete="nickname" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="disponibilites">Disponibilités (court)</label>
+              <textarea
+                id="disponibilites"
+                name="disponibilites"
+                rows="3"
+                placeholder="ex: samedi après-midi, plutôt 15h–18h"
+              ></textarea>
+            </div>
+
+            <div class="field checkbox">
+              <input id="gdpr" name="gdpr" type="checkbox" required />
+              <label for="gdpr">
+                J’accepte que mes données soient utilisées pour l’organisation du tournoi et leur conservation pendant 3 mois.
+              </label>
+            </div>
+
+            <p id="form-help" class="help">
+              Données : conservées <strong>3 mois après l’événement</strong>, puis supprimées. Aucun tracking activé par défaut.
+            </p>
+
+            <div id="form-status" class="status" role="status" aria-live="polite"></div>
+
+            <button type="submit" class="btn btn-primary btn-wide" id="submitBtn">
+              Envoyer ma préinscription
+            </button>
+
+            <p class="smallprint">
+              En cas de souci : contacte-nous sur Instagram (voir footer).
+            </p>
+          </form>
+
+          <aside class="side-panel" aria-label="Infos & QR">
+            <div class="panel-block" id="qr">
+              <h3>QR (partage)</h3>
+              <p class="muted">Scanne pour ouvrir la page. Remplace le fichier QR final dans <code>/assets/qr-placeholder.png</code>.</p>
+
+              <!-- Image placeholder (peut être remplacée). Fallback CSS si indisponible. -->
+              <figure class="qr-wrap">
+                <img
+                  id="qrImg"
+                  class="qr-img"
+                  src="./assets/qr-placeholder.png"
+                  alt="QR code vers la landing page (placeholder)"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div id="qrFallback" class="qr-fallback" hidden aria-hidden="true">
+                  <div class="qr-box" role="img" aria-label="QR placeholder"></div>
+                  <p class="muted small">QR placeholder</p>
+                </div>
+              </figure>
+            </div>
+
+            <div class="panel-block">
+              <h3>Fair-play</h3>
+              <ul class="bullets">
+                <li>Respect des joueurs & arbitres</li>
+                <li>Zéro insultes, zéro triche</li>
+                <li>Décisions d’orga = finales</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="faq-title" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="faq-title">FAQ</h2>
+          <p class="section-subtitle">Les réponses rapides avant de venir.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>C’est gratuit ?</summary>
+            <div class="details-body">Oui, <strong>gratuit</strong>. Les places sont limitées — la préinscription aide à organiser.</div>
+          </details>
+
+          <details>
+            <summary>Âge minimum ?</summary>
+            <div class="details-body">Ouvert à tous. Mineurs : venir avec une autorisation / accompagnement selon les règles sur place.</div>
+          </details>
+
+          <details>
+            <summary>Matériel fourni ?</summary>
+            <div class="details-body">En général oui (consoles/écrans). Si tu apportes ton matos, préviens-nous dans “Disponibilités”.</div>
+          </details>
+
+          <details>
+            <summary>Nourriture / boisson ?</summary>
+            <div class="details-body">Selon le lieu : point d’eau, snacks possibles. Respecte les consignes de la salle.</div>
+          </details>
+
+          <details>
+            <summary>Règles & fair-play ?</summary>
+            <div class="details-body">Comportement respectueux obligatoire. L’orga peut exclure en cas de triche/toxicité.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <h2 class="footer-title">Contact</h2>
+        <p class="muted">
+          Instagram : <a href="https://instagram.com/TON_INSTAGRAM" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+          <!-- TODO: remplace TON_INSTAGRAM -->
+        </p>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Données & RGPD</h2>
+        <p class="muted">
+          Données collectées uniquement pour l’organisation du tournoi. Conservation : <strong>3 mois après l’événement</strong>.
+          <a href="#preinscription">Voir le consentement</a>.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Crédits</h2>
+        <p class="muted">
+          © <span id="year"></span>  E‑Sport. Landing statique (sans backend).
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Overlay de confirmation -->
+  <div class="overlay" id="thanksOverlay" hidden role="dialog" aria-modal="true" aria-labelledby="thanksTitle">
+    <div class="overlay-card" role="document">
+      <h2 id="thanksTitle">Merci !</h2>
+      <p>Ta préinscription est prise en compte. Tu recevras un message à l’adresse indiquée.</p>
+      <button class="btn btn-primary" id="closeOverlayBtn" type="button">OK</button>
+    </div>
+  </div>
+
+  <!-- Tracking (optionnel)
+    - Plausible : ajoute le script avec ton domaine, ex:
+      <script defer data-domain="tondomaine.fr" src="https://plausible.io/js/script.js"></script>
+    - Google Analytics : nécessite gestion du consentement (RGPD) avant chargement des tags.
+    Par défaut: aucun tracker inclus.
+  -->
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>
